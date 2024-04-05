@@ -107,5 +107,70 @@ public class TaskController {
 
             frame.add(panel);
         });
+
+        view.getModifyTask().addActionListener(e -> {
+            JFrame frame = new JFrame("Modifier une tâche");
+            frame.setSize(600, 300);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            frame.setVisible(true);
+
+            JPanel panel = new JPanel();
+            BoxLayout boxLayout = new BoxLayout(panel, BoxLayout.Y_AXIS);
+            panel.setLayout(boxLayout);
+
+            JLabel idLabel = new JLabel("ID");
+            JTextField idField = new JTextField();
+            idField.setSize(200, 30);
+            panel.add(idLabel);
+            panel.add(idField);
+
+            JLabel titreLabel = new JLabel("Titre");
+            JTextField titreField = new JTextField();
+            titreField.setSize(200, 30);
+            panel.add(titreLabel);
+            panel.add(titreField);
+
+            JLabel descriptionLabel = new JLabel("Description");
+            JTextField descriptionField = new JTextField();
+            descriptionField.setSize(200, 30);
+            panel.add(descriptionLabel);
+            panel.add(descriptionField);
+
+            JLabel dateEchanceLabel = new JLabel("Date d'échéance");
+            JTextField dateEchanceField = new JTextField();
+            dateEchanceField.setSize(200, 30);
+            panel.add(dateEchanceLabel);
+            panel.add(dateEchanceField);
+
+            JComboBox<String> prioriteBox = new JComboBox<>();
+            prioriteBox.addItem("Faible");
+            prioriteBox.addItem("Moyenne");
+            prioriteBox.addItem("Haute");
+            panel.add(prioriteBox);
+
+            JButton submit = new JButton("Modifier");
+            submit.addActionListener(e1 -> {
+                int id = Integer.parseInt(idField.getText());
+                String titre = titreField.getText();
+                String description = descriptionField.getText();
+                String dateEchance = dateEchanceField.getText();
+                String priorite = (String) prioriteBox.getSelectedItem();
+
+                for (TaskModel task : tasks) {
+                    if (task.getId() == id) {
+                        task.setTitre(titre);
+                        task.setDescription(description);
+                        task.setDateEchance(dateEchance);
+                        task.setPriorite(priorite);
+                        break;
+                    }
+                }
+
+                frame.dispose();
+            });
+            panel.add(submit);
+
+            frame.add(panel);
+        });
     }
 }
