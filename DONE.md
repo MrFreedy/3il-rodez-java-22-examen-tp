@@ -6,39 +6,37 @@ Ce document récapitule les réalisations effectuées dans le cadre du TP de ges
 
 ### Ajout d'une tâche
 
-- [ ] Formulaire de saisie des détails de la tâche.
-- [ ] Bouton "Ajouter".
+- [X] Formulaire de saisie des détails de la tâche.
+- [X] Bouton "Ajouter".
 - [ ] Test unitaire associé.
 
-(Explication et justification de ce qui a été fait...)
+On peut créer des tâches
 
 ### Modification d'une tâche
 
-- [ ] Mécanisme de sélection et de modification de la tâche.
-- [ ] Bouton "Modifier".
+- [X] Mécanisme de sélection et de modification de la tâche.
+- [X] Bouton "Modifier".
 - [ ] Test unitaire associé.
 
-(Explication et justification de ce qui a été fait...)
-
+On peut modifier des tâches graĉe à l'id
 ### Suppression d'une tâche
 
-- [ ] Mécanisme de sélection et de suppression de la tâche.
-- [ ] Bouton "Supprimer".
+- [X] Mécanisme de sélection et de suppression de la tâche.
+- [X] Bouton "Supprimer".
 - [ ] Test unitaire associé.
 
-(Explication et justification de ce qui a été fait...)
-
+On eput supprimer des tâches grâce à l'id
 ### Visualisation des tâches
 
-- [ ] Affichage des détails des tâches existantes.
-- [ ] Mécanisme de filtrage ou de tri des tâches.
+- [X] Affichage des détails des tâches existantes.
+- [X] Mécanisme de filtrage ou de tri des tâches.
 - [ ] Test unitaire associé.
 
-(Explication et justification de ce qui a été fait...)
+JTable permettant de visualiser les tâches
 
 ### Gestion des priorités
 
-- [ ] Possibilité de définir la priorité lors de l'ajout ou de la modification de la tâche.
+- [X] Possibilité de définir la priorité lors de l'ajout ou de la modification de la tâche.
 - [ ] Test unitaire associé.
 
 (Explication et justification de ce qui a été fait...)

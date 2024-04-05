@@ -172,5 +172,34 @@ public class TaskController {
 
             frame.add(panel);
         });
+
+        view.getListTask().addActionListener(e -> {
+            JFrame frame = new JFrame("Liste des tâches");
+            frame.setSize(600, 300);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            frame.setVisible(true);
+
+            JPanel panel = new JPanel();
+            BoxLayout boxLayout = new BoxLayout(panel, BoxLayout.Y_AXIS);
+            panel.setLayout(boxLayout);
+
+            int i =0;
+            String [] columnNames = {"ID", "Titre", "Description", "Date d'échéance", "Priorité"};
+            String [][] data = new String[tasks.size()][5];
+            for (TaskModel task : tasks) {
+                data[i][0] = String.valueOf(task.getId());
+                data[i][1] = task.getTitre();
+                data[i][2] = task.getDescription();
+                data[i][3] = task.getDateEchance();
+                data[i][4] = task.getPriorite();
+                i++;
+            }
+            JTable table = new JTable(data, columnNames);
+            table.setBounds(30,40,200,300);
+            JScrollPane sp = new JScrollPane(table);
+            panel.add(sp);
+
+            frame.add(panel);
+        });
     }
 }
