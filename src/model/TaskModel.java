@@ -1,6 +1,7 @@
 package model;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class TaskModel {
     int id;
@@ -12,8 +13,8 @@ public class TaskModel {
     public TaskModel() {
     }
 
-    public TaskModel(int id, String titre, String description, String dateEchance, String priorite) {
-        this.id = id;
+    public TaskModel(String titre, String description, String dateEchance, String priorite) {
+        this.id = (int) Math.floor(Math.random() * 1000);
         this.titre = titre;
         this.description = description;
         this.dateEchance = dateEchance;

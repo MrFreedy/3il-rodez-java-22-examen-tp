@@ -7,6 +7,11 @@ import java.awt.*;
 
 public class TaskView extends JPanel{
     private TaskModel model;
+
+    public JButton createTask;
+    public JButton modifyTask;
+    public JButton deleteTask;
+    public JButton listTask;
     public TaskView(TaskModel model) {
         super();
         this.model = model;
@@ -26,16 +31,16 @@ public class TaskView extends JPanel{
         panelH.setBackground(Color.WHITE);
         panelH.setLayout(boxLayoutH);
 
-        JButton createTask = new JButton("Créer une tâche");
+        createTask = new JButton("Créer une tâche");
 
 
-        JButton modifyTask = new JButton("Modifier une tâche");
+        modifyTask = new JButton("Modifier une tâche");
 
 
-        JButton deleteTask = new JButton("Supprimer une tâche");
+        deleteTask = new JButton("Supprimer une tâche");
 
 
-        JButton listTask = new JButton("Lister les tâches");
+        listTask = new JButton("Lister les tâches");
 
 
         JButton exit = new JButton("Quitter");
@@ -51,5 +56,37 @@ public class TaskView extends JPanel{
         panelH.add(listTask);
         panelH.add(exit);
         add(panelV);
+    }
+
+    public JButton getCreateTask() {
+        return createTask;
+    }
+
+    public void setCreateTask(JButton createTask) {
+        this.createTask = createTask;
+    }
+
+    public JButton getModifyTask() {
+        return modifyTask;
+    }
+
+    public void setModifyTask(JButton modifyTask) {
+        this.modifyTask = modifyTask;
+    }
+
+    public JButton getDeleteTask() {
+        return deleteTask;
+    }
+
+    public void setDeleteTask(JButton deleteTask) {
+        this.deleteTask = deleteTask;
+    }
+
+    public JButton getListTask() {
+        return listTask;
+    }
+
+    public void setListTask(JButton listTask) {
+        this.listTask = listTask;
     }
 }
