@@ -1,9 +1,9 @@
 package model;
 
 public interface ITask {
-    void ajouterTask(Task task);
-    void modifierTask(Task task);
-    void supprimerTask(Task task);
+    void ajouterTask(TaskModel task);
+    void modifierTask(TaskModel task);
+    void supprimerTask(TaskModel task);
 
-    Task[] getTasks();
+    TaskModel[] getTasks();
 }
